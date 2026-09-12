@@ -1,0 +1,587 @@
+/* =========================================================================
+   YASEEN VANTAGE™ | MASTER INTAKE PORTAL UI LAYOUT ENGINE v2.5
+   PART 1 - CORE VARIANT DESIGN ROOTS, MASTER PARADIGMS, & CANVAS RESETS
+   ========================================================================= */
+
+/* --- CORE CUSTOM IDENTITY LUXURY COLOR ROOTS --- */
+:root {
+  --obsidian: #050a14;
+  --navy-main: #0a111f;
+  --navy-soft: #162236;
+  --color-gold: #c5a059;
+  --gold-dim: rgba(197, 160, 89, 0.15);
+  --white: #ffffff;
+  --muted: rgba(255, 255, 255, 0.4);
+}
+
+/* --- MASTER DOCUMENT BASE RE-ALIGNMENTS --- */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(
+    --obsidian
+  ) !important; /* Hard-locks background canvas color to pure dark */
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Helvetica Neue", "Inter", sans-serif;
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* --- MASTER INTERFACE MONOLITH CONTAINER --- */
+.op-monolith {
+  width: 90%;
+  max-width: 800px;
+  margin: 60px auto;
+  background: var(--navy-main);
+  border: 1px solid var(--gold-dim);
+  padding: 70px 50px;
+  box-sizing: border-box;
+}
+/* =========================================================================
+   YASEEN VANTAGE™ | MASTER INTAKE PORTAL UI LAYOUT ENGINE v2.5
+   PART 2 - UNIFORM HEADERS, MOBILE TYPOGRAPHY COMPRESSION, & GRID INFRASTRUCTURE
+   ========================================================================= */
+
+/* --- 3. UNIFORM CORPORATE NAVBAR HEADER BLOCK --- */
+.header-block {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+/* 
+   FIXED BRAND MARK ENGINE SHIELD:
+   Hard-locks bounding box dimensions to stop your gold sigil logo asset 
+   from expanding, stretching, bloating, or distorting on mobile selections.
+*/
+.form-logo {
+  max-width: 140px !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.title-white {
+  font-size: 24px;
+  letter-spacing: 0.4em;
+  color: var(--white);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.form-grid,
+.mobile-stack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.full {
+  grid-column: span 2 !important; /* Forces elements to span both columns across desktop views */
+  width: 100% !important;
+}
+
+/* PURE CLEAN STARK TYPOGRAPHY LABELS (WITHOUT AUTOMATED CSS PSEUDO COUNTERS) */
+.section-label {
+  grid-column: span 2;
+  font-size: 11px;
+  color: var(--color-gold);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin: 45px 0 15px;
+  border-bottom: 1px solid var(--gold-dim);
+  padding-bottom: 10px;
+  text-align: left;
+  font-weight: 700;
+}
+
+/* --- 5. RESPONSIVE TYPOGRAPHY COMPRESSION SHIELD (MOBILE RE-ALIGNMENT PATCH) --- */
+@media (max-width: 768px) {
+  .op-monolith {
+    width: 92%;
+    padding: 40px 20px;
+    margin: 20px auto;
+  }
+
+  /* Compresses text track proportions cleanly to keep titles from spilling off or touching the right margins */
+  .title-white {
+    font-size: 16px !important;
+    letter-spacing: 0.25em !important;
+    line-height: 1.4 !important;
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .op-sub {
+    font-size: 8px !important;
+    letter-spacing: 0.18em !important;
+  }
+
+  .form-logo {
+    max-width: 110px !important;
+    margin-bottom: 15px;
+  }
+
+  /* 
+     🔒 MASTER VIEWPORT FLUID STACK ENGINE
+     Forces your double-column desktop grids to fold cleanly into a single vertical column on phone screens.
+     This eliminates horizontal squishing, keeps unique inputs aligned, and secures perfect visual symmetry.
+  */
+  .form-grid,
+  .mobile-stack-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+/* =========================================================================
+   YASEEN VANTAGE™ | MASTER INTAKE PORTAL UI LAYOUT ENGINE v2.5
+   PART 3 - EXECUTIVE DATA BLOCKS, BILLING BOARDS, & FLEX RESPONSIVE OVERRIDES
+   ========================================================================= */
+
+/* --- 6. EXECUTIVE DATA INPUT FIELDS --- */
+.input-box {
+  background: var(--navy-soft);
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-box label {
+  display: block;
+  font-size: 8px;
+  color: var(--color-gold);
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Premium Stark White Focus Interactive Transitions */
+.input-box:focus-within {
+  background: #ffffff !important;
+}
+
+.input-box:focus-within input,
+.input-box:focus-within select,
+.input-box:focus-within textarea {
+  color: #000000 !important;
+}
+
+select option {
+  background: var(--navy-soft);
+  color: var(--white);
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* --- 7. CATALOG SELECTION CHECKBOX MATRICES --- */
+.check-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  text-transform: uppercase;
+  background: var(--navy-soft);
+  padding: 14px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.check-item:hover {
+  border-color: rgba(197, 160, 89, 0.4);
+  color: var(--white);
+}
+
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--color-gold);
+  cursor: pointer;
+  margin: 0;
+}
+
+/* --- 8. UN-TAMPERABLE REAL-TIME BILLING INTERFACE --- */
+.billing-summary-panel {
+  background: rgba(197, 160, 89, 0.03);
+  border: 1px dashed var(--gold-dim);
+  padding: 25px;
+  margin-top: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.billing-title {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.billing-amount-display {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+.billing-notice {
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* --- RESPONSIVE MATRIX FOR CATALOG MATRIX OVERRIDES --- */
+@media (max-width: 768px) {
+  .check-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  #wrapper-selective-badge {
+    margin-top: 10px !important;
+    margin-bottom: 25px !important;
+  }
+
+  /* 
+     🔒 MASTER VIEWPORT PRESENTATION SHIELD
+     Removes legacy display block overrides on parent container elements.
+     This stops the mobile sheet from breaking your javascript visibility rules,
+     keeping hidden sections closed and containing long price strings inside boundaries!
+  */
+  .billing-summary-panel {
+    padding: 20px 12px !important;
+  }
+
+  .billing-amount-display {
+    font-size: 20px !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  select,
+  select option {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* --- RESPONSIVE MATRIX FOR CATALOG MATRIX OVERRIDES --- */
+@media (max-width: 768px) {
+  /* 
+     🔒 PREMIUM SELECTION FLUID ACCENT
+     Forces adjacent custom card option blocks to stack into a clean vertical column layout.
+     This stops typography compression, removes label squishing, and aligns choices perfectly!
+  */
+  .check-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* 
+     🔒 PORTRAIT MOBILE STATUS BADGE LEAK DEFENDER
+     Hardlocks the wrapper block to default to a completely hidden state on mobile devices.
+     It will now un-shroud ONLY when an explicit card slide passes the '.is-visible' state,
+     permanently stopping generic dropdown choices from forcing the empty banner open!
+  */
+  #wrapper-selective-badge:not(.is-visible) {
+    display: none !important;
+  }
+
+  #wrapper-selective-badge {
+    margin-top: 10px !important;
+    margin-bottom: 25px !important;
+  }
+}
+
+/* --- 9. SECURITY ALERT CONSOLES & APIS --- */
+.form-diagnostic-console {
+  grid-column: span 2;
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+  padding: 15px;
+  color: #f87171;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#paypal-gateway-container {
+  grid-column: span 2;
+  margin-top: 40px;
+  display: none;
+  width: 100%;
+}
+
+.gateway-loading-text {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 45px;
+  width: 100%;
+}
+
+.btn-initiate {
+  background: transparent;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 20px 60px;
+  font-size: 11px;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.4s,
+    color 0.4s,
+    box-shadow 0.4s;
+}
+
+.btn-initiate:hover {
+  background: var(--color-gold);
+  color: #000000;
+  box-shadow: 0 0 35px rgba(197, 160, 89, 0.25);
+}
+
+/* --- 10. TERMINAL SUCCESS TAKEOVER SCREEN CONTAINER --- */
+#confirmation {
+  position: fixed;
+  inset: 0;
+  background: var(--obsidian);
+  z-index: 10001;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.sigil-breath {
+  width: 60px;
+  height: auto;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+.status-italic {
+  font-style: italic;
+  color: var(--muted);
+  font-style: italic;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/* --- 11. HARD RIGID OVERRIDES FOR MOBILE DEVICE TOUCHGLASS VIEWPORTS --- */
+@media (max-width: 768px) {
+  .form-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+
+  /* Blasts horizontal lanes out, forcing form blocks to break into vertical stacks cleanly */
+  .mobile-stack-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+
+  /* 
+     🔒 MASTER VIEWPORT PRESENTATION SHIELD
+     Decoupled the global .full structural class from the static block rules.
+     This stops the stylesheet from overriding inline JavaScript display states,
+     allowing hidden sections to stay hidden until explicitly called by the engine!
+  */
+  .input-box,
+  .section-label {
+    width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    clear: both !important;
+  }
+
+  .full {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .check-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .section-label {
+    text-align: left !important;
+    margin-top: 25px !important;
+  }
+
+  /* 
+     🔒 MOBILE-ONLY BILLING CARD PRESENTATION SHIELD
+     Converts the box layout from horizontal fields into a stacked vertical column structure.
+     Compresses font proportions on mobile touchglass viewports to keep long currency
+     arrays (like TZS numbers) perfectly balanced and contained inside the boundaries!
+  */
+  .billing-summary-panel {
+    padding: 24px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .billing-title,
+  .billing-notice {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .billing-amount-display {
+    font-size: 22px !important; /* Compresses text scale quietly on mobile to prevent row breaking */
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 4px 0 !important;
+  }
+
+  /* Clears text overrides inside native browser drop-down selectors */
+  select,
+  select option {
+    padding: 10px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* =========================================================================
+   🔒 YASEEN VANTAGE™ | EXTERNAL PREMIUM SKIN HARMONIZATION DECK
+   ========================================================================= */
+
+/* Overrides browser autofill style engines to force transparent canvas integration */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: transparent !important;
+  transition: background-color 999999s ease-in-out 0s !important;
+}
+
+/* Hardlocks structural field transparency so your core navy theme colors bleed through */
+.form-grid input,
+.form-grid textarea,
+.form-grid select {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+}
+
+/* Active focus paths: allows your native theme file classes to paint styling states cleanly */
+.form-grid input:focus,
+.form-grid textarea:focus,
+.form-grid select:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Checkbox alignment synchronization layers */
+.check-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+}
+
+.check-item input[type="checkbox"] {
+  cursor: pointer !important;
+  accent-color: #c5a059 !important;
+}

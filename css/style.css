@@ -1,0 +1,3425 @@
+/* =========================================================================
+   YASEEN VANTAGE™ | MASTER CONTEXT SYSTEM
+   VERSION 1.0 - STYLE DESIGN SYSTEM CORE (PREMIUM ENGINE SEALS)
+   ========================================================================= */
+/* =========================================================================
+   CRITICAL GLOBAL TOUCH SAFEGUARD LAYER: ERADICATES BLUE CLICKER FLICKER ON TAP
+   ========================================================================= */
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -moz-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
+a,
+button,
+img,
+select,
+span,
+div,
+input,
+.tree-node-item,
+.gateway-asset-anchor,
+.menu-button {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  outline: none !important;
+}
+
+/* --- INITIALIZATION & SYSTEM DEFAULTS --- */
+:root {
+  --color-navy: #02162f;
+  --color-black: #050505;
+  --color-charcoal: #111111;
+  --color-gold: #c8a14a;
+  --color-white: #f5f5f5;
+
+  --header-top-height: 60px;
+  --header-bottom-height: 55px;
+  --transition-luxury: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-reveal: all 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Refinement 3: Extended drawer timeline to a slow, heavy 1.1-second crawl */
+  --transition-drawer: all 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- CLICKS INTERACTIVE RESET LAYER --- */
+.header-interactive-node,
+.logo-interactive-anchor,
+.footer-vector-node {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* --- MATH GRIDS (Ensures Absolute Center Balances) --- */
+.header-grid {
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.unified-width-lock {
+  width: 92%;
+  max-width: 1600px;
+}
+
+.layout-align-left {
+  padding-left: 0;
+  margin-left: 0;
+}
+.layout-align-right {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.item-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* --- ASSET INSULATION FRAME PROTECTION LAYER --- */
+.icon-layout-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: auto;
+}
+
+.text-icon-gap {
+  margin-right: 9px;
+}
+.local-png-node {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+/* --- HD LOGO PROTECTIVE BOX --- */
+.logo-vector-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  max-width: 280px;
+  overflow: hidden;
+}
+
+.master-png-wordmark {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+/* --- MASTER HEADER INFRASTRUCTURE --- */
+.master-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-top {
+  height: var(--header-top-height);
+  background-color: var(--color-navy);
+  border-bottom: 1px solid rgba(200, 161, 74, 0.15);
+  position: relative;
+  z-index: 1002;
+}
+
+.text-systems {
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.header-bottom {
+  height: var(--header-bottom-height);
+  background-color: var(--color-navy);
+  border-bottom: 1px solid rgba(5, 5, 5, 0.3);
+  position: relative;
+  z-index: 1001;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.master-header.hide-bottom-panel .header-bottom {
+  transform: translateY(-100%);
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22px;
+  height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.menu-button .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-white);
+  display: block;
+  transition: var(--transition-luxury);
+}
+.text-access {
+  font-size: 0.85rem;
+  letter-spacing: 6px;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+/* Hamburger Morphing States (Generates clean 'X') */
+.menu-button.drawer-active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-button.drawer-active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+.menu-button.drawer-active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Luxury Currency Select Dropdown Box */
+.luxury-select-box {
+  position: relative;
+  user-select: none;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+.select-trigger {
+  border: 1px solid rgba(245, 245, 245, 0.25);
+  padding: 6px 14px;
+  background: var(--color-black);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.select-arrow {
+  font-size: 0.55rem;
+  color: var(--color-gold);
+}
+.select-options-panel {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: var(--color-charcoal);
+  border: 1px solid var(--color-gold);
+  list-style: none;
+  width: 100%;
+  display: none;
+}
+.select-options-panel.active-panel {
+  display: block;
+}
+.select-options-panel li {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.select-options-panel li:hover {
+  background: var(--color-navy);
+  color: var(--color-gold);
+}
+
+/* --- HERO POSITIONING ENGINE (110VH FRAME) --- */
+.hero-system {
+  position: relative;
+  min-height: 110vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-black);
+}
+
+.hero-media-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-img-node {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.15;
+  filter: grayscale(100%) contrast(115%);
+}
+.hero-vignette-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(5, 5, 5, 0) 25%,
+    rgba(5, 5, 5, 0.95) 100%
+  );
+}
+
+.hero-content-matrix {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  width: 88%;
+  max-width: 1100px;
+  padding-top: calc(var(--header-top-height) + 15px);
+}
+
+/* =========================================================================
+   YASEEN VANTAGE™ | REFINED HERO TYPOGRAPHY SPACE CONFIGURATION v5.5
+   REDUCES AGGRESSIVE TRACKING SCALES AND INJECTS LUXURY CO-AXIAL BUFFER GAPS
+   ========================================================================= */
+
+.primary-headline {
+  /* Enforces absolute flat horizontal row layout alignment natively across all screen viewports */
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+
+  /* REFINEMENT 1: Gently decreased font sizing profile scales down raw footprint weight */
+  font-size: calc(2rem + 1.2vw) !important;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  /* REFINEMENT 2: Reduced tracking metrics from 1.15em down to a quiet, authoritative gap */
+  letter-spacing: 0.5em !important;
+  text-indent: 0.5em !important; /* Perfect balance math forces text strings to center accurately */
+  line-height: 1.2;
+
+  margin-top: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  /* REFINEMENT 3: Significantly increased vertical breathing distance gap right below headline */
+  margin-bottom: 95px !important;
+  width: 100%;
+}
+
+/* --- THE SUBTLE SLOW FIXED-ROW RANDOMIZED REVEAL ENGINE --- */
+.random-reveal-char {
+  display: inline-block !important;
+  white-space: nowrap !important;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--reveal-idx) * 220ms);
+  will-change: opacity, transform;
+}
+
+.random-reveal-char.char-reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* THE SUBTEXT DECK LAYER: POSITIONING & PERCEPTION SYSTEMS */
+.supporting-perception-label-deck {
+  font-size: calc(0.9rem + 0.3vw) !important;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75) !important;
+  letter-spacing: 2px !important;
+  line-height: 1.4;
+  margin-top: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  /* Massive breathing cushion spacing before the view systems action button link */
+  margin-bottom: 140px !important;
+  text-align: center;
+  width: 100%;
+}
+
+/* =========================================================================
+   🔒 CROSS-PLATFORM OVERRIDES FOR SMARTPHONE TOUCHGLASS SIZES
+   ========================================================================= */
+@media (max-width: 768px) {
+  .primary-headline {
+    font-size: 22px !important;
+    letter-spacing: 0.25em !important;
+    text-indent: 0.25em !important;
+    margin-bottom: 50px !important; /* Retains deep vertical separation gaps on mobile glass */
+  }
+
+  .random-reveal-char {
+    transition:
+      opacity 1.2s ease,
+      transform 1.2s ease;
+    transition-delay: calc(var(--reveal-idx) * 120ms);
+  }
+
+  .supporting-perception-label-deck {
+    font-size: 13.5px !important;
+    margin-bottom: 80px !important;
+    max-width: 290px;
+    line-height: 1.5;
+  }
+}
+
+/* --- 3D ROTATING LIVE BUTTON CORE --- */
+.btn-live-system {
+  position: relative;
+  width: 240px;
+  height: 52px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-live-system::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 40%,
+    rgba(200, 161, 74, 0.1) 60%,
+    var(--color-gold) 100%
+  );
+  animation: liveSystemRotation 6s infinite linear;
+  z-index: 1;
+}
+.btn-inner-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  z-index: 2;
+  transition: var(--transition-luxury);
+}
+.btn-live-system:hover .btn-inner-text {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+@keyframes liveSystemRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- LUXURY RECURSIVE REVEAL SYSTEM TIMINGS --- */
+.recursive-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(15px);
+  transition: var(--transition-reveal);
+}
+.recursive-reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+.reveal-delay-1.reveal-active {
+  transition-delay: 0.25s;
+}
+.reveal-delay-2.reveal-active {
+  transition-delay: 0.75s;
+}
+.reveal-delay-3.reveal-active {
+  transition-delay: 1.25s;
+}
+
+/* --- DETACHED 3-UTILITY AUTHORITY FOOTER --- */
+.master-footer {
+  background-color: var(--color-navy);
+  border-top: 1px solid rgba(200, 161, 74, 0.15);
+  padding: 50px 0 35px 0;
+}
+
+.footer-grid-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.footer-row {
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.center-column-lock {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+.footer-slogan {
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+}
+.footer-copyright {
+  font-size: 0.75rem;
+  color: rgba(245, 245, 245, 0.4);
+  letter-spacing: 1px;
+}
+
+.footer-navigation-strip {
+  width: 100%;
+  border-top: 1px solid rgba(245, 245, 245, 0.12);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.12);
+  padding: 18px 0;
+}
+.footer-inner-row {
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-inner-row a {
+  color: rgba(245, 245, 245, 0.75);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: var(--transition-luxury);
+}
+.footer-inner-row a:hover {
+  color: var(--color-gold);
+}
+.link-divider {
+  color: rgba(245, 245, 245, 0.15);
+  margin: 0 10px;
+}
+
+.asset-categorization-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+.category-block {
+  display: flex;
+  align-items: center;
+}
+.block-social {
+  justify-content: flex-start;
+  gap: 24px;
+}
+.footer-icon-shield {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: auto;
+}
+.footer-icon-shield img {
+  height: 100%;
+  width: auto;
+}
+.block-payments {
+  justify-content: center;
+  gap: 16px;
+}
+.badge-layout-shield {
+  display: flex;
+  align-items: center;
+  height: 16px;
+  width: auto;
+}
+.badge-layout-shield img {
+  height: 100%;
+  width: auto;
+}
+.block-signature {
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  color: rgba(245, 245, 245, 0.35);
+}
+
+/* --- RE-CALIBRATED LUXURY NAVIGATION DRAWER --- */
+.menu-console-drawer {
+  position: fixed;
+  top: calc(var(--header-top-height) + var(--header-bottom-height));
+  left: 0;
+  width: 320px;
+  height: max-content;
+  max-height: calc(
+    100vh - (var(--header-top-height) + var(--header-bottom-height) + 60px)
+  );
+  background-color: rgba(3, 27, 58, 0.96);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-right: 1px solid rgba(200, 161, 74, 0.2);
+  border-bottom: 1px solid rgba(200, 161, 74, 0.2);
+  z-index: 998;
+  overflow-y: auto;
+  padding: 35px 35px;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-drawer);
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-console-drawer.drawer-open {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Deep Background Blurring Blanket Layer */
+.drawer-escape-blanket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(5, 5, 5, 0.5);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  z-index: 997;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-drawer);
+  pointer-events: none;
+}
+
+body.drawer-active-mask .drawer-escape-blanket {
+  opacity: 1;
+  visibility: visible;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.drawer-inner-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.drawer-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-header-title {
+  font-size: 0.74rem;
+  color: rgba(245, 245, 245, 0.85);
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  user-select: none;
+  margin-bottom: 4px;
+}
+
+.nested-tree-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+}
+
+.tree-node-item {
+  font-size: 0.88rem;
+  color: rgba(245, 245, 245, 0.5) !important;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: block;
+  padding: 3px 0 3px 14px;
+  transition:
+    color 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+    padding-left 0.18s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nested-tree-links:hover .tree-node-item {
+  opacity: 0.15;
+  filter: blur(2.5px);
+}
+
+.nested-tree-links .tree-node-item:hover {
+  color: var(--color-gold) !important;
+  padding-left: 20px;
+  opacity: 1 !important;
+  filter: blur(0);
+  transform: scale(1.04);
+}
+
+/* --- LIST RECURSIVE REVEAL STAGGER TIMINGS --- */
+.drawer-reveal-node {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateX(-10px);
+  transition: var(--transition-drawer);
+}
+
+.menu-console-drawer.drawer-open .drawer-reveal-node {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.menu-console-drawer.drawer-open .drawer-reveal-node:hover {
+  opacity: 1 !important;
+}
+
+.menu-console-drawer.drawer-open li:nth-child(1) .drawer-reveal-node {
+  transition-delay: 0.25s;
+}
+.menu-console-drawer.drawer-open li:nth-child(2) .drawer-reveal-node {
+  transition-delay: 0.38s;
+}
+.menu-console-drawer.drawer-open li:nth-child(3) .drawer-reveal-node {
+  transition-delay: 0.51s;
+}
+.menu-console-drawer.drawer-open li:nth-child(4) .drawer-reveal-node {
+  transition-delay: 0.64s;
+}
+
+/* =========================================================================
+   YASEEN VANTAGE™ | MASTER MOBILE CALIBRATION FRAMEWORK EXTENSION (FIXED)
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  /* --- LAYER 1 FIXED TOP HEADER PROFILE (RE-NAVY MATRIX) --- */
+  .header-top {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    background-color: var(--color-navy) !important;
+    padding: 16px 0 !important;
+    height: auto !important;
+    z-index: 10000 !important;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.04) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* --- LAYER 2 SLIDING NAV PANEL TRACK (RE-NAVY MATRIX) --- */
+  .header-bottom {
+    position: relative !important;
+    background-color: var(--color-navy) !important;
+    padding: 12px 0 !important;
+    z-index: 9998 !important;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.05) !important;
+    margin-top: 56px !important;
+  }
+
+  /* Symmetrical horizontal layout tracking alignments constraints preserves perfect edge spaces */
+  .header-top .header-grid,
+  .header-bottom .header-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 92% !important;
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .header-bottom .header-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr 1fr !important;
+    justify-content: center !important;
+  }
+
+  .text-systems {
+    display: none !important;
+  }
+
+  .icon-layout-shield {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .local-png-node {
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  .logo-vector-shield {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .master-png-wordmark {
+    font-size: 1.2rem !important;
+    letter-spacing: 2.5px !important;
+    white-space: nowrap !important;
+    max-width: 160px !important;
+    height: auto !important;
+  }
+
+  /* --- HAMBURGER MENU PROFILE STABILIZATION --- */
+  .header-bottom .item-left {
+    justify-content: flex-start !important;
+    display: flex !important;
+  }
+
+  .menu-button {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 22px !important;
+    height: 14px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .menu-button .bar {
+    display: block !important;
+    width: 100% !important;
+    height: 1.5px !important;
+    background-color: var(--color-white) !important;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease !important;
+  }
+
+  .menu-button.drawer-active .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg) !important;
+  }
+  .menu-button.drawer-active .bar:nth-child(2) {
+    opacity: 0 !important;
+  }
+  .menu-button.drawer-active .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg) !important;
+  }
+
+  /* Re-calibrated text color tag back to your premium solid gold accent tone */
+  .text-access {
+    font-size: 0.78rem !important;
+    letter-spacing: 4px !important;
+    text-align: center !important;
+    color: var(--color-gold) !important;
+    display: block !important;
+    margin: 0 auto !important;
+    width: max-content !important;
+    font-weight: bold !important;
+  }
+
+  /* Currency Dropdown alignment parameters */
+  .header-bottom .item-right {
+    justify-content: flex-end !important;
+    display: flex !important;
+  }
+
+  .luxury-select-box {
+    display: inline-flex !important;
+    margin: 0 !important;
+  }
+
+  .select-trigger {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 1px !important;
+    background: transparent !important;
+    border: 1px solid rgba(245, 245, 245, 0.15) !important;
+  }
+
+  /* --- HERO TYPOGRAPHY BALANCING CONTROLS --- */
+  .hero-content-matrix {
+    width: 90% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding-top: 60px !important;
+  }
+
+  .primary-headline {
+    font-size: 1.5rem !important;
+    line-height: 1.5 !important;
+    letter-spacing: 1.5px !important;
+    font-weight: 300 !important;
+    text-wrap: balance !important;
+    margin-bottom: 24px !important;
+  }
+
+  .supporting-narrative {
+    font-size: 0.84rem !important;
+    letter-spacing: 1.5px !important;
+    line-height: 1.5 !important;
+    color: rgba(245, 245, 245, 0.55) !important;
+  }
+
+  /* --- GENERAL NAVIGATION DRAWER MATRIX ADJUSTMENTS --- */
+  .menu-console-drawer {
+    width: 85%;
+    top: 110px !important;
+    height: max-content;
+    max-height: calc(100vh - 110px);
+  }
+
+  /* --- THE STRATEGIC MODULAR FOOTER SEQUENCE (PERFECT CENTER MATRIX) --- */
+  .master-footer {
+    padding: 60px 0 40px 0 !important;
+    background-color: var(--color-navy) !important;
+  }
+
+  .footer-grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* UTILITY SEQUENCE ROW 1: Slogan & Copyright Group */
+  .center-column-lock {
+    order: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-slogan {
+    font-size: 1.1rem !important;
+    letter-spacing: 2px !important;
+    color: var(--color-white) !important;
+  }
+
+  .footer-copyright {
+    font-size: 0.72rem !important;
+    color: rgba(245, 245, 245, 0.4) !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  /* UTILITY SEQUENCE ROW 2: Links Grid & Full-Width Divider Rails */
+  .footer-navigation-strip {
+    order: 2 !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(245, 245, 245, 0.08) !important;
+    border-bottom: none !important;
+    padding-top: 30px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .footer-inner-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-inner-row .item-left,
+  .footer-inner-row .item-right {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .footer-inner-row .item-center {
+    display: none !important;
+  }
+
+  .link-divider {
+    color: rgba(245, 245, 245, 0.15) !important;
+  }
+
+  /* UTILITY SEQUENCE ROW 3: Merged Socials & Payments Row Track */
+  .asset-categorization-grid {
+    order: 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(245, 245, 245, 0.08) !important;
+    padding-top: 30px !important;
+    margin: 0 !important;
+  }
+
+  .block-social,
+  .block-payments {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-icon-shield,
+  .badge-layout-shield {
+    height: 20px !important;
+    width: auto !important;
+    opacity: 0.5 !important;
+  }
+
+  .footer-icon-shield img,
+  .badge-layout-shield img {
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* UTILITY SEQUENCE ROW 4: Final Authority Signature Asset */
+  .block-signature {
+    order: 4 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 10px auto 0 auto !important;
+  }
+
+  .block-signature span {
+    font-size: 0.65rem !important;
+    color: rgba(245, 245, 245, 0.3) !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+} /* This final bracket now wraps the whole block safely */
+
+/* --- RE-CALIBRATED MAIN SYSTEMS CONTAINER SPACING --- */
+.systems-engine-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 220px 0 160px 0; /* Clear deep space isolates Page 2 cleanly below your Hero */
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+
+/* Background Texture Continuum Layer */
+.systems-section-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.backdrop-texture-node {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.05;
+  filter: grayscale(100%) contrast(115%);
+}
+
+.systems-vignette-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-black) 0%,
+    rgba(5, 5, 5, 0.95) 12%,
+    transparent 30%,
+    transparent 85%,
+    var(--color-black) 100%
+  );
+}
+
+.systems-central-matrix {
+  position: relative;
+  z-index: 5;
+
+  /* Perfect symmetry setup anchors equal empty margins at far left and right screen edges */
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+/* Title Block Container */
+.section-title-wrap {
+  width: 100%;
+  margin-bottom: 45px;
+  padding-left: 0;
+  display: inline-block;
+}
+
+.section-authority-heading {
+  font-size: calc(1.1rem + 0.6vw);
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: var(--color-white);
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+/* Clean micro-thin gold underline decoration */
+.section-authority-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 1.5px;
+  background-color: var(--color-gold);
+}
+
+/* Structural Row Matrix */
+.system-structural-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
+}
+
+.system-column-left {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.system-column-right {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Clickable Collective Asset Frame Layer Controls */
+.asset-card-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  cursor: pointer;
+}
+
+.asset-card-frame {
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+
+  /* Initial subtle border padding */
+  border: 1px solid rgba(200, 161, 74, 0.15);
+
+  /* Smooth transition pacing profiles */
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.local-card-png {
+  width: 100%;
+  height: auto; /* Force automatic calculation to stop the image from cutting off */
+  display: block;
+  object-fit: contain;
+}
+
+/* Card Hover Highlights Action */
+.asset-card-link:hover .asset-card-frame {
+  transform: translateY(-8px) scale(1.015);
+  border-color: var(
+    --color-gold
+  ); /* Gold border triggers beautifully on hover selection */
+  box-shadow: 0 20px 40px rgba(200, 161, 74, 0.18);
+}
+
+/* Typographies and Blocks */
+.system-tier-title {
+  font-size: calc(1.15rem + 0.4vw);
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  margin-bottom: 18px;
+}
+
+.system-tier-description {
+  font-size: calc(0.84rem + 0.1vw);
+  color: rgba(245, 245, 245, 0.6);
+  line-height: 1.65;
+  letter-spacing: 0.5px;
+  max-width: 450px;
+  margin-bottom: 32px;
+}
+
+.price-container-lock {
+  border: 1px solid rgba(245, 245, 245, 0.2);
+  padding: 12px 32px;
+  background-color: var(--color-black);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  border-radius: 2px;
+}
+
+.price-numerical-tag {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.system-tier-badge {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  padding: 6px 0;
+  text-transform: uppercase;
+}
+
+.badge-private {
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.system-tier-label {
+  font-size: 0.85rem;
+  color: rgba(245, 245, 245, 0.4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* --- RE-CALIBRATED LIGHT OBSERVER TRANSLATION --- */
+.recursive-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(2.5px);
+  transition:
+    opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.recursive-reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(
+    0px
+  ); /* Restores clean sharpness when scrolled into perspective viewports */
+}
+
+/* EMERGENCY BREAK: Absolute safety bracket terminates any unclosed code blocks from above instantly */
+
+/* --- RESPONSIVE MATRIX --- */
+@media (max-width: 1024px) {
+  .systems-central-matrix {
+    gap: 80px;
+  }
+  .system-structural-row {
+    gap: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .systems-engine-container {
+    padding: 110px 0 110px 0;
+  }
+  .systems-central-matrix {
+    gap: 65px;
+    width: 90%;
+  }
+  .section-title-wrap {
+    margin-bottom: 20px;
+  }
+
+  .system-structural-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .system-column-left,
+  .system-column-right {
+    width: 100%;
+    flex: none;
+  }
+
+  .asset-card-link {
+    max-width: 100%;
+  }
+  .system-column-right {
+    padding-left: 2px;
+  }
+
+  /* =========================================================================
+     SURGICAL ADDITION: PERFECT SYMMETRICAL FOOTER CONTAINER & BRAND CENTER LOCK
+     ========================================================================= */
+  .master-footer {
+    background-color: var(
+      --color-navy
+    ) !important; /* Preserves Deep Navy background continuity */
+    padding: 25px 0 55px 0 !important; /* Adjusted top padding to counteract element push */
+    position: relative !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    display: block !important;
+  }
+
+  .footer-grid-container {
+    display: flex !important;
+    flex-direction: column !important; /* Forces vertical sequence layout mapping */
+    align-items: center !important;
+    text-align: center !important;
+    gap: 24px !important; /* Restrains row-to-row spacing to tight, uniform gaps */
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+  }
+
+  /* 
+     THE UNIFIED TEXT GROUP VERTICAL CORE LOCK
+     Binds both the slogan and copyright inside an isolated container block.
+     Applies perfectly matching top and bottom cushioning to ensure identical
+     empty spaces, correcting the final vertical layout drift completely.
+  */
+  .center-column-lock {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+    padding: 40px 0 40px 0 !important; /* Balanced vertical cushion splits empty space exactly 50/50 */
+  }
+
+  .footer-slogan {
+    font-size: 1.15rem !important;
+    letter-spacing: 2.5px !important;
+    line-height: 1.3 !important;
+    color: var(--color-white) !important;
+    margin: 0 0 12px 0 !important; /* Fixed tight margin below slogan */
+    padding: 0 !important;
+  }
+
+  .footer-copyright {
+    font-size: 0.72rem !important;
+    color: rgba(245, 245, 245, 0.4) !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important; /* Zeroed bottom margin prevents layout pushing */
+    padding: 0 !important;
+    text-transform: uppercase !important;
+  }
+
+  /* --- ADDITIONAL VERTICAL SEQUENCE ALIGNMENTS --- */
+  .footer-navigation-strip {
+    width: 100% !important;
+    border-top: 1px solid rgba(245, 245, 245, 0.08) !important;
+    border-bottom: none !important;
+    padding-top: 25px !important;
+    padding-bottom: 5px !important;
+    margin: 0 !important;
+  }
+
+  .footer-inner-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-inner-row .item-left,
+  .footer-inner-row .item-right {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px !important;
+    font-size: 0.82rem !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .footer-inner-row .item-center {
+    display: none !important;
+  }
+
+  .link-divider {
+    color: rgba(245, 245, 245, 0.15) !important;
+  }
+
+  .asset-categorization-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(245, 245, 245, 0.08) !important;
+    padding-top: 25px !important;
+    margin: 0 !important;
+  }
+
+  .block-social,
+  .block-payments {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .footer-icon-shield,
+  .badge-layout-shield {
+    height: 20px !important;
+    width: auto !important;
+    opacity: 0.5 !important;
+  }
+
+  .footer-icon-shield img,
+  .badge-layout-shield img {
+    height: 100% !important;
+    width: auto !important;
+    object-fit: contain !important;
+  }
+
+  /* UTILITY SEQUENCE ROW 4: Final Authority Signature Asset (REALIGNED DOWN) */
+  .block-signature {
+    order: 4 !important;
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+
+    /* Increased top margin buffer from 5px to 25px to push signature away from payment icons */
+    margin: 25px auto 0 auto !important;
+    padding: 0 !important;
+  }
+
+  .block-signature span {
+    font-size: 0.65rem !important;
+    color: rgba(245, 245, 245, 0.3) !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    display: inline-block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* --- DIRECT RECTANGULAR DRAWER CONTACT BUFFER CONFIGURATIONS --- */
+.drawer-email-buffer {
+  margin-top: 25px;
+  border-top: 1px solid rgba(245, 245, 245, 0.05);
+  padding-top: 20px;
+}
+
+.firm-email-anchor,
+.firm-whatsapp-anchor {
+  font-size: 0.82rem !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* Stagger delay ensures the WhatsApp link arrives gracefully as the absolute final element */
+.menu-console-drawer.drawer-open li .firm-whatsapp-anchor {
+  transition-delay: 0.8s !important;
+}
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: UPGRADED INFINITE CAROUSEL ENHANCEMENTS MATRIX
+   ========================================================================= */
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: UPGRADED INFINITE CAROUSEL ENHANCEMENTS MATRIX
+   ========================================================================= */
+
+.enhancements-engine-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+
+  /* Deep luxury breathing room margins separate section frames cleanly */
+  padding: 180px 0 180px 0;
+
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+
+/* Perfect Center Heading Metrics Setup */
+.enhancements-title-wrap-center {
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto 65px auto; /* Deep space before banner shield arrives */
+  text-align: center;
+}
+
+.heading-centered-lock {
+  display: inline-block;
+  padding-bottom: 14px;
+  position: relative;
+}
+
+/* Centered visual marker underline decoration */
+.heading-centered-lock::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45px;
+  height: 1.5px;
+  background-color: var(--color-gold);
+}
+
+/* Corporate Image Shield Banner Layer (Edge-to-Edge Wide Section Container) */
+.corporate-banner-shield {
+  position: relative;
+  width: 100%;
+  height: 420px; /* Enhanced deep vertical block presence footprint */
+  margin-bottom: 110px; /* Massive luxury space separates wide banner from scrolling slates */
+  overflow: hidden;
+  background-color: var(--color-charcoal);
+}
+
+.banner-media-node {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.35;
+  filter: grayscale(100%) contrast(110%);
+}
+
+.banner-gradient-shroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-black) 0%,
+    rgba(5, 5, 5, 0.4) 20%,
+    rgba(5, 5, 5, 0.4) 80%,
+    var(--color-black) 100%
+  );
+}
+
+/* The Horizontal Dynamic Carousel System Viewport */
+.enhancements-carousel-viewport {
+  overflow: hidden;
+
+  /* Symmetry alignment matching master container bounds ensures zero side touching */
+  width: 92%;
+  max-width: 1600px;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+/* Horizontal linear tracking layout node wrapper */
+.carousel-infinite-track {
+  display: flex;
+  width: max-content;
+  gap: 35px; /* Wide breathing intervals between slates */
+
+  /* 
+     CRITICAL RE-ACTIVATION TRIGGER: 
+     Restores your automated slow luxury autoplay crawl continuum track natively.
+  */
+  animation: luxuryEndlessSlide 38s linear infinite;
+  will-change: transform;
+
+  /* 
+       SURGICAL ANTIDOTE: 
+       Completely locks out native desktop/mobile blue text highlighting 
+       and image-selection copy hooks which cause cursor stickiness.
+    */
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
+/* Pause horizontal animation timeline dynamically on hover selection focus */
+.carousel-infinite-track:hover {
+  animation-play-state: paused !important;
+  cursor: grab; /* Shows an open hand inviting them to click or swipe */
+}
+
+/* 
+   SURGICAL DRAG TAKE-OVER FILTER:
+   When our JavaScript injects this target handle class during an active swipe,
+   it shuts down the CSS keyframe loop entirely to give the client free manual control.
+*/
+.carousel-infinite-track.is-dragging {
+  animation: none !important; /* Cancel loop and transition into a closed fist style when actively holding down the swipe track */
+  cursor: grabbing !important; /* Fist style indicates active drag hold */
+}
+
+/* Prevent internal card elements from absorbing the cursor focus during track movement */
+.enhancement-collectible-card,
+.enhancement-card-inner,
+.enhancement-card-title,
+.enhancement-card-tagline {
+  pointer-events: auto; /* Keeps clicks active but lets drag motions pass through to the track background */
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
+/* Utility layout layer blocks raw browser link drag selection ghosting templates */
+.carousel-infinite-track.is-dragging a {
+  pointer-events: none !important; /* Temporarily turns off links during active swiping to stop accidental click triggers */
+}
+
+.enhancement-collectible-card {
+  width: 300px; /* Calibrated width ensures tight density line wrapping */
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+/* Upgraded Card Graphics: Obsidian Deep Slate separates elegantly from background black canvases */
+.enhancement-card-inner {
+  background-color: #0b131e !important;
+  border: 1px solid rgba(200, 161, 74, 0.15);
+  padding: 45px 30px; /* Wide padding creates executive space around text rows */
+  border-radius: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Interactive Card Reaction Metrics */
+.enhancement-collectible-card:hover .enhancement-card-inner {
+  transform: translateY(-8px);
+  border-color: var(--color-gold);
+  box-shadow: 0 20px 45px rgba(200, 161, 74, 0.15);
+}
+
+/* CSS Clean Geometric Icons Layer (Guarantees zero missing file path breaks) */
+.css-geometric-marker {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--color-gold);
+  position: relative;
+  opacity: 0.8;
+}
+
+.icon-shield-box {
+  border-radius: 50% 50% 4px 4px;
+}
+.icon-dossier-box::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 7px;
+  height: 1.5px;
+  background: var(--color-gold);
+}
+.icon-compass-box {
+  transform: rotate(45deg);
+}
+.icon-console-box {
+  border-radius: 2px;
+}
+.icon-console-box::before {
+  content: ">";
+  position: absolute;
+  top: -3px;
+  left: 2px;
+  font-size: 8px;
+  color: var(--color-gold);
+  font-family: monospace;
+}
+.icon-portal-box {
+  border: none;
+  border-bottom: 2px solid var(--color-gold);
+  border-top: 2px solid var(--color-gold);
+}
+.icon-network-box {
+  border-radius: 2px;
+  background: transparent;
+}
+
+.enhancement-icon-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  margin-bottom: 24px;
+}
+
+/* Text Metrics Hierarchy */
+.enhancement-card-title {
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--color-white);
+  margin-bottom: 14px;
+}
+
+.enhancement-card-tagline {
+  font-size: 0.78rem;
+  color: rgba(245, 245, 245, 0.45);
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.enhancement-card-price {
+  font-size: 0.82rem;
+  color: var(--color-gold);
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Ghost Button Placement Layout Matrix */
+.enhancements-action-strip {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px; /* Isolated deep spacing above callout click triggers */
+}
+
+.btn-ghost-request {
+  background: transparent;
+  border: 1px solid rgba(245, 245, 245, 0.25);
+  color: rgba(245, 245, 245, 0.8);
+  padding: 16px 50px;
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 2px;
+  transition: var(--transition-luxury);
+}
+
+.btn-ghost-request:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 0 0 25px rgba(200, 161, 74, 0.15);
+}
+
+/* Endless Slider Translation Timeline Keyframe Mapping */
+@keyframes luxuryEndlessSlide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(calc(-300px * 6 - 35px * 6), 0, 0);
+  } /* Matches expanded parameters pixel coordinates exactly */
+}
+
+/* Responsive Scaling Rules Overrides Matrix */
+@media (max-width: 768px) {
+  .enhancements-engine-container {
+    padding: 110px 0 110px 0;
+  }
+
+  .corporate-banner-shield {
+    height: 260px;
+    margin-bottom: 60px;
+  }
+
+  /* 
+     THE MOBILE SLIDER TRACK VIEWPORT SHIELD
+     Unlocks the browser's hardware layer to re-activate fluid horizontal scrolling.
+     Expanded vertical breathing padding allows the gold glow to dissolve smoothly.
+  */
+  .enhancements-carousel-viewport {
+    width: 90% !important;
+    overflow-x: auto !important; /* Forces the track to be slidable on touch glass screens */
+    overflow-y: visible !important; /* Unlocks vertical clipping boundaries to stop hard rectangle cuts */
+    padding-top: 15px !important;
+    padding-bottom: 45px !important; /* Enhanced vertical breathing room lets shadows fade to 0% opacity */
+    -webkit-overflow-scrolling: touch !important; /* Smooth native finger inertia tracking */
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(200, 161, 74, 0.35) transparent !important;
+  }
+
+  /* 
+     THE PREMIUM HORIZONTAL SLIDER BAR TOOL
+     Builds a razor-thin manual sliding rail tool right below your cards.
+     Gives your high-ticket mobile users a clear asset tool to pull or slide the carousel.
+  */
+  .enhancements-carousel-viewport::-webkit-scrollbar {
+    height: 4px !important; /* Clean, micro-thin luxury profile */
+    display: block !important; /* Displays strictly on mobile phone screens */
+  }
+
+  .enhancements-carousel-viewport::-webkit-scrollbar-track {
+    background: rgba(
+      245,
+      245,
+      245,
+      0.03
+    ) !important; /* Subtle silent background track */
+    border-radius: 10px !important;
+  }
+
+  .enhancements-carousel-viewport::-webkit-scrollbar-thumb {
+    background: rgba(
+      200,
+      161,
+      74,
+      0.35
+    ) !important; /* Gold tracking thumb highlight element */
+    border-radius: 10px !important;
+    transition: background 0.3s ease !important;
+  }
+
+  .enhancements-carousel-viewport::-webkit-scrollbar-thumb:active {
+    background: var(
+      --color-gold
+    ) !important; /* Brightens up into solid gold on active touch grab */
+  }
+
+  .carousel-infinite-track {
+    animation-duration: 25s !important; /* Speeds up crawl velocity slightly on smaller mobile touchscreens */
+    gap: 20px;
+  }
+
+  @keyframes luxuryEndlessSlide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(calc(-285px * 6 - 20px * 6), 0, 0);
+    }
+  }
+
+  .btn-ghost-request {
+    width: 90%;
+    text-align: center;
+    margin-top: 45px !important; /* Uniform luxury vertical alignment offset spacing */
+  }
+
+  /* --- SURGICAL RESISTANCE: ELIMINATES MOBILE CARD GOLD FLOOD, DOUBLE BORDERS, & RECTANGLE SHADOW GHOSTS --- */
+  .carousel-infinite-track a:active,
+  .carousel-infinite-track a:focus,
+  .enhancement-collectible-card:active,
+  .enhancement-collectible-card:focus {
+    /* 
+       THE OPACITY ZERO NULLIFICATION SHIELD:
+       Forces any raw parent anchor box containers leaking underneath to be totally 
+       transparent and clear of shadows on touch. Wipes out the 90-degree ghost artifact completely.
+    */
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    -webkit-appearance: none !important;
+  }
+
+  .carousel-infinite-track a:active .enhancement-card-inner,
+  .carousel-infinite-track a:focus .enhancement-card-inner,
+  .enhancement-collectible-card:active .enhancement-card-inner,
+  .enhancement-collectible-card:focus .enhancement-card-inner {
+    /* Only the inner curved slate receives the styling to protect profile shapes */
+    background-color: #0b131e !important;
+    transform: scale(
+      0.98
+    ) !important; /* Subtle executive compression click feedback */
+    box-shadow: 0 8px 35px rgba(200, 161, 74, 0.06) !important; /* Diffused luxury aura */
+    border-color: var(
+      --color-gold
+    ) !important; /* Modifies pre-existing framework boundary color line */
+    outline: none !important;
+  }
+} /* Final absolute closing bracket seals the entire mobile responsive media block safely */
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: YASEEN VANTAGE™ TRANSFORMATION QUAD SHIELD ENGINE
+   ========================================================================= */
+
+.transformation-engine-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 160px 0 160px 0;
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+
+.transform-title-wrap-center {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+/* 
+   THE MANUAL HORIZONTAL VIEWPORT WRAPPER (GLOBAL COVERAGE)
+   Transforms the layout into a scrollable track across all screens.
+   Maintains safe padding buffers so text blocks never touch the window edges.
+*/
+.transformation-pods-shield {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 4% 40px 4%; /* Generates equal spacing on the far left and far right margins */
+  scrollbar-width: thin; /* Premium clean micro scrollbar layout for Firefox browsers */
+  scrollbar-color: rgba(200, 161, 74, 0.2) transparent;
+  -webkit-overflow-scrolling: touch; /* Fast touch mechanics for mobile glass screens */
+}
+
+/* Custom Webkit scrollbar stylings preserves absolute minimalist aesthetic look */
+.transformation-pods-shield::-webkit-scrollbar {
+  height: 3px;
+}
+.transformation-pods-shield::-webkit-scrollbar-track {
+  background: transparent;
+}
+.transformation-pods-shield::-webkit-scrollbar-thumb {
+  background: rgba(200, 161, 74, 0.15);
+  border-radius: 2px;
+}
+.transformation-pods-shield::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* Linear Ribbon Track Layout: Packs all 4 pods side-by-side on the same baseline */
+.transformation-flow-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  width: max-content;
+  gap: 35px; /* Deep professional breathing room intervals separating components */
+  align-items: stretch; /* Forces all 4 cards to maintain the exact same vertical size */
+}
+
+/* Equal Proportional Luxury Container Pods */
+.transformation-luxury-pod {
+  background-color: #0b131e !important; /* Premium Obsidian Slate base panel */
+  border: 1px solid rgba(200, 161, 74, 0.15);
+  border-radius: 12px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 320px; /* Locks each card container to a balanced desktop and mobile dimension width */
+  flex-shrink: 0; /* Prevents the boxes from being compressed or distorted */
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Micro-Interaction Highlight Effects */
+.transformation-luxury-pod:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: 0 15px 35px rgba(200, 161, 74, 0.12);
+}
+
+/* Precise gold accent line borders strictly link 'The Shift' central framework card */
+.active-shift-pod {
+  border-color: rgba(200, 161, 74, 0.35);
+  box-shadow: 0 5px 25px rgba(200, 161, 74, 0.05);
+}
+
+/* Local Image Protection Capsule */
+.transformation-image-shield {
+  width: 100%;
+  aspect-ratio: 1.66 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 35px;
+  background-color: var(--color-black);
+}
+
+.local-script-png {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.55;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.transformation-luxury-pod:hover .local-script-png {
+  opacity: 0.9;
+}
+
+/* Content Text Architecture */
+.script-text-block-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.script-status-label {
+  font-size: 0.76rem;
+  letter-spacing: 3px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.status-before {
+  color: rgba(245, 245, 245, 0.4);
+}
+.status-shift {
+  color: var(--color-gold);
+}
+.status-after {
+  color: var(--color-white);
+}
+.status-outcome {
+  color: rgba(200, 161, 74, 0.85);
+}
+
+/* Premium Continuous Explanation Copy Typographies */
+.luxury-explanation-paragraph {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.primary-explanation-text {
+  font-size: 0.88rem;
+  color: var(--color-white);
+  letter-spacing: 0.5px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.secondary-explanation-subtext {
+  font-size: 0.8rem;
+  color: rgba(245, 245, 245, 0.45);
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  font-style: italic;
+  position: relative;
+  padding-left: 16px;
+}
+
+/* Tiny luxury geometric marker dot divider */
+.secondary-explanation-subtext::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: rgba(245, 245, 245, 0.2);
+  font-size: 0.85rem;
+}
+
+.active-shift-pod .secondary-explanation-subtext::before {
+  color: var(--color-gold) !important;
+}
+
+/* --- MOBILE RESPONSIVE TUNING --- */
+@media (max-width: 768px) {
+  .transformation-engine-container {
+    padding: 100px 0 100px 0;
+  }
+  .transformation-pods-shield {
+    /* Refinement Cushion: Expanded padding room lets the soft radial touch glow fade cleanly */
+    padding: 10px 5% 55px 5% !important;
+  } /* Calibrates safe borders margins for small phone screens */
+  .transformation-luxury-pod {
+    width: 285px;
+    padding: 40px 24px;
+  }
+}
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: RESPONSIVE METRICS FOR GEOMETRIC DOT PANELS
+   ========================================================================= */
+
+.luxury-indicator-dots-panel {
+  /* 
+       DESKTOP PROTECTION SHIELD: 
+       Completely hides the tracking dots on widescreen monitors by default 
+       since all cards are fully visible side-by-side on large displays.
+    */
+  display: none !important;
+
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important; /* Elegant space separations between circular tracking tokens */
+  width: 100% !important;
+  max-width: 200px !important;
+  margin: 35px auto 0 auto !important; /* Center block alignment */
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.indicator-dot {
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important; /* Forces perfect geometric circular path profiles */
+  border: 1px solid rgba(245, 245, 245, 0.25) !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
+  transition:
+    background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Gold active coordinate indicator focus highlight state */
+.indicator-dot.active-dot {
+  background-color: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
+  transform: scale(1.15) !important;
+}
+
+/* --- RESPONSIVE MOBILE SPRINT BREAKPOINTS OVERRIDES --- */
+@media (max-width: 768px) {
+  /* 
+       SMARTPHONE TOUCH GLASS ENGINE RE-ACTIVATION:
+       Brings the indicator tracking panel cleanly into view only on phone screens 
+       where the content columns collapse into an intentional horizontal swipe lane.
+    */
+  .luxury-indicator-dots-panel {
+    display: flex !important;
+    margin: 25px auto 0 auto !important; /* Tightens breathing room below card decks */
+  }
+
+  /* 
+       THE MASTER MATRIX CLIPPING EXTENSION LAYER
+       Surgically removes parent element hidden masks to allow active 
+       shadow glows to flow and dissolve seamlessly without hard-cut border anomalies.
+  */
+  .transformation-central-matrix {
+    overflow: visible !important; /* Unlocks parent box boundary limitations */
+    padding-bottom: 20px !important; /* Creates buffer room above dots tracker */
+  }
+
+  /* 
+       SILENT SCROLLBAR OVERRIDE:
+       Hides the rough native webkit layout browser scrollbar completely on phone screens 
+       so only your custom luxury dots guide the client's horizontal swipe tracking.
+    */
+  .transformation-pods-shield::-webkit-scrollbar,
+  .payment-pods-shield::-webkit-scrollbar {
+    display: none !important;
+    height: 0px !important;
+    background: transparent !important;
+  }
+
+  .transformation-pods-shield,
+  .payment-pods-shield {
+    overflow-x: auto !important;
+    overflow-y: visible !important; /* Stops the hard bottom cut on your card shadows */
+    scrollbar-width: none !important; /* Firefox hidden scrollbar override attribute */
+    -webkit-overflow-scrolling: touch !important; /* Maintains fast, organic finger momentum tracking */
+  }
+
+  /* --- SURGICAL RESISTANCE: ELIMINATES TRANSFORMATION CARD GHOST RECTANGLE ON TOUCH --- */
+  .transformation-flow-grid .transformation-luxury-pod:active,
+  .transformation-flow-grid .transformation-luxury-pod:focus {
+    /* 
+       THE OPACITY ZERO NULLIFICATION SHIELD:
+       Forces any raw parent containers leaking underneath to be totally 
+       transparent and clear of shadows on touch. Wipes out the 90-degree ghost artifact completely.
+    */
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    -webkit-appearance: none !important;
+  }
+
+  .transformation-flow-grid
+    .transformation-luxury-pod:active
+    .transformation-image-shield,
+  .transformation-flow-grid
+    .transformation-luxury-pod:focus
+    .transformation-image-shield,
+  .transformation-flow-grid
+    .transformation-luxury-pod:active
+    .script-text-block-wrap,
+  .transformation-flow-grid
+    .transformation-luxury-pod:focus
+    .script-text-block-wrap {
+    /* Keeps inner child elements neutral while the primary container manages the tap action */
+    outline: none !important;
+  }
+
+  /* Focuses the luxury diffused aura strictly onto the inner card panel shape */
+  .transformation-flow-grid .transformation-luxury-pod:active,
+  .transformation-flow-grid .transformation-luxury-pod:focus {
+    /* Subtle compression feedback feeling matching elite dashboard inputs */
+    transform: scale(0.98) !important;
+
+    /* Hard-locks the background color to your premium obsidian base to prevent color bleed leaks */
+    background-color: #0b131e !important;
+    border-color: var(--color-gold) !important;
+
+    /* 
+       THE SOFT FLOATING RADIAL GLOW FILTER:
+       Increased blur radius to 50px and dropped density down to 3% opacity.
+       This makes the aura spread out broadly and fade to zero completely seamlessly.
+    */
+    box-shadow: 0 15px 50px rgba(200, 161, 74, 0.03) !important;
+  }
+} /* Final absolute closing bracket seals the entire mobile responsive media block safely */
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: ASYNCHRONOUS SWAP MATRIX ENGINE (GAME PROFILE)
+   ========================================================================= */
+
+.brands-engine-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 120px 0 140px 0;
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+
+.brands-title-wrap-center {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto 60px auto !important;
+  display: block;
+}
+
+.brands-authority-tagline {
+  font-size: 0.78rem;
+  color: rgba(245, 245, 245, 0.45);
+  letter-spacing: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* Master Fixed Center Layout Box Matrix */
+.brands-icon-grid-capsule {
+  display: grid !important;
+  grid-template-columns: repeat(8, 1fr) !important;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 92% !important;
+  max-width: 1600px !important;
+  margin: 0 auto !important;
+}
+
+.brand-cell-slot {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: visible;
+}
+
+.brand-logo-vector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: auto;
+  opacity: 0.55;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+.local-brand-logo-png {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(100%) contrast(110%);
+}
+
+/* 
+   THE ASYNCHRONOUS SWAP ENGINE MATRIX
+   Every single tracking item moves on an entirely distinct percentage cycle loop
+   and uses customized translation distance shifts to make tracking unpredictable.
+*/
+.swap-track-1 {
+  animation: gameTrack1 12s infinite ease-in-out;
+}
+.swap-track-2 {
+  animation: gameTrack2 10s infinite ease-in-out;
+}
+.swap-track-3 {
+  animation: gameTrack3 14s infinite ease-in-out;
+}
+.swap-track-4 {
+  animation: gameTrack4 11s infinite ease-in-out;
+}
+.swap-track-5 {
+  animation: gameTrack5 13s infinite ease-in-out;
+}
+.swap-track-6 {
+  animation: gameTrack6 9s infinite ease-in-out;
+}
+.swap-track-7 {
+  animation: gameTrack7 15s infinite ease-in-out;
+}
+.swap-track-8 {
+  animation: gameTrack8 10.5s infinite ease-in-out;
+}
+
+@keyframes gameTrack1 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  15% {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  22% {
+    opacity: 0;
+    transform: translate3d(calc(200% + 40px), 0, 0);
+  } /* Swaps deep right */
+  40% {
+    opacity: 0.55;
+    transform: translate3d(calc(200% + 40px), 0, 0);
+  }
+  75% {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
+@keyframes gameTrack2 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  25% {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  32% {
+    opacity: 0;
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  } /* Swaps left 1 unit */
+  60% {
+    opacity: 0.55;
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  }
+  80% {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+}
+
+@keyframes gameTrack3 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0);
+  }
+  38% {
+    opacity: 0;
+    transform: translate3d(calc(300% + 60px), 0, 0);
+  } /* Jumps 3 columns forward */
+  55% {
+    opacity: 0.55;
+    transform: translate3d(calc(300% + 60px), 0, 0);
+  }
+  85% {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+}
+
+@keyframes gameTrack4 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  18% {
+    opacity: 0;
+    transform: translate3d(-40px, 0, 0);
+  }
+  26% {
+    opacity: 0;
+    transform: translate3d(calc(-200% - 40px), 0, 0);
+  } /* Swaps backward 2 units */
+  50% {
+    opacity: 0.55;
+    transform: translate3d(calc(-200% - 40px), 0, 0);
+  }
+  72% {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes gameTrack5 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  40% {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  48% {
+    opacity: 0;
+    transform: translate3d(calc(-300% - 60px), 0, 0);
+  } /* Long jump backward */
+  70% {
+    opacity: 0.55;
+    transform: translate3d(calc(-300% - 60px), 0, 0);
+  }
+  92% {
+    opacity: 0;
+    transform: translate3d(20px, 0, 0);
+  }
+}
+
+@keyframes gameTrack6 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  12% {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  20% {
+    opacity: 0;
+    transform: translate3d(calc(200% + 40px), 0, 0);
+  }
+  45% {
+    opacity: 0.55;
+    transform: translate3d(calc(200% + 40px), 0, 0);
+  }
+  65% {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+}
+
+@keyframes gameTrack7 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+  58% {
+    opacity: 0;
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  }
+  78% {
+    opacity: 0.55;
+    transform: translate3d(calc(-100% - 20px), 0, 0);
+  }
+  88% {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+}
+
+@keyframes gameTrack8 {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translate3d(0, 0, 0);
+  }
+  22% {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+  }
+  30% {
+    opacity: 0;
+    transform: translate3d(calc(-400% - 80px), 0, 0);
+  } /* Absolute massive swap track */
+  65% {
+    opacity: 0.55;
+    transform: translate3d(calc(-400% - 80px), 0, 0);
+  }
+  82% {
+    opacity: 0;
+    transform: translate3d(40px, 0, 0);
+  }
+}
+
+/* --- MOBILES RESPONSIVE ADAPTATIONS --- */
+@media (max-width: 1024px) {
+  .brands-icon-grid-capsule {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-engine-container {
+    padding: 80px 0 90px 0;
+  }
+
+  .brands-icon-grid-capsule {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+    width: 90% !important;
+  }
+
+  /* Cross-staggers simple fades on mobile glass to prevent viewport clip overflow breaks */
+  .brand-logo-vector {
+    animation: mobileGameFade 7s infinite ease-in-out;
+    opacity: 0.5;
+  }
+  .swap-track-1 {
+    animation-delay: 0s;
+  }
+  .swap-track-2 {
+    animation-delay: 0.8s;
+  }
+  .swap-track-3 {
+    animation-delay: 1.6s;
+  }
+  .swap-track-4 {
+    animation-delay: 2.4s;
+  }
+  .swap-track-5 {
+    animation-delay: 3.2s;
+  }
+  .swap-track-6 {
+    animation-delay: 4s;
+  }
+  .swap-track-7 {
+    animation-delay: 4.8s;
+  }
+  .swap-track-8 {
+    animation-delay: 5.6s;
+  }
+}
+
+@keyframes mobileGameFade {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.1;
+    transform: scale(0.95);
+    filter: blur(1.5px);
+  }
+}
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: SECURE PAYMENT DESK™ HORIZONTAL RIBBON CORE
+   ========================================================================= */
+
+.payment-engine-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+  padding: 160px 0 160px 0;
+  overflow: hidden;
+  clear: both;
+  display: block;
+}
+
+.payment-title-wrap-center {
+  width: 100%;
+  text-align: center !important;
+  margin: 0 auto 65px auto !important;
+  display: block;
+}
+
+/* 
+   THE HORIZONTAL SCROLL VIEWPORT SHIELD
+   Ensures absolute left/right empty symmetry on desktops, while providing
+   a natural manual swipe ribbon track on mobile screens.
+*/
+.payment-pods-shield {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 4% 40px 4%; /* Generates equal spacing on the far left and right margins */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 161, 74, 0.15) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Minimal scrollbar parameters */
+.payment-pods-shield::-webkit-scrollbar {
+  height: 3px;
+}
+.payment-pods-shield::-webkit-scrollbar-track {
+  background: transparent;
+}
+.payment-pods-shield::-webkit-scrollbar-thumb {
+  background: rgba(200, 161, 74, 0.12);
+  border-radius: 2px;
+}
+
+/* Linear Flex Track: Packs all 3 pods horizontally on the same desktop baseline */
+.payment-flow-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  width: max-content;
+  margin: 0 auto; /* Horizontally centers the entire ribbon under the master title line */
+  gap: 35px; /* Spacious breathing space separating the pods */
+  align-items: stretch; /* Forces all cards to maintain the exact same vertical size */
+}
+
+/* Equal Proportional Minimalist Luxury Pods */
+.payment-luxury-pod {
+  background-color: #0b131e !important; /* Premium Obsidian Slate base */
+  border: 1px solid rgba(200, 161, 74, 0.15);
+  border-radius: 12px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 320px; /* Slimmer horizontal width limits footprint dominance */
+  flex-shrink: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.payment-luxury-pod:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: 0 15px 35px rgba(200, 161, 74, 0.12);
+}
+
+/* Card Header Configuration Row */
+.payment-card-header-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.05);
+  padding-bottom: 16px;
+  width: 100%;
+}
+
+.payment-card-header-row .luxury-numeric-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(200, 161, 74, 0.4);
+  border-radius: 50%;
+  font-size: 0.95rem;
+  color: var(--color-gold);
+  font-weight: 300;
+  background-color: rgba(5, 5, 5, 0.4);
+  flex-shrink: 0;
+}
+
+.payment-section-heading {
+  font-size: 0.74rem;
+  color: var(--color-white);
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.payment-card-body-track {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.track-center-align {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Copy Blocks Typographies Matrix */
+.financial-scope-text {
+  font-size: 0.82rem;
+  color: rgba(245, 245, 245, 0.6);
+  line-height: 1.55;
+  letter-spacing: 0.3px;
+  margin-bottom: 12px;
+}
+
+.financial-scope-text:last-of-type {
+  margin-bottom: 0;
+}
+
+.financial-sub-callout-text {
+  font-size: 0.75rem;
+  color: rgba(245, 245, 245, 0.4);
+  font-style: italic;
+  margin-top: 14px;
+  line-height: 1.4;
+}
+
+.text-gold {
+  color: var(--color-gold) !important;
+  font-weight: 500;
+}
+.text-white {
+  color: var(--color-white) !important;
+  font-weight: 600;
+}
+
+/* Flat Informational Methods Ribbon */
+.static-gateway-display-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.static-badge-capsule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: auto;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.local-static-payment-png {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  filter: grayscale(100%) contrast(110%);
+}
+
+.secure-encryption-badge-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.encryption-icon {
+  font-size: 0.75rem;
+  opacity: 0.4;
+}
+.encryption-text {
+  font-size: 0.65rem;
+  color: rgba(245, 245, 245, 0.35);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* --- RE-CALIBRATED INVESTMENT PROTOCOLS MOBILE TITLE --- */
+#secure-payment-desk .heading-centered-lock {
+  font-size: 1.15rem !important; /* Calibrated size limits horizontal line dominance */
+  letter-spacing: 3px !important; /* Sharp elegant letter separation tracking */
+  line-height: 1.3 !important;
+  padding-bottom: 12px !important; /* Balanced vertical gapping above underline rail */
+}
+
+#secure-payment-desk .payment-title-wrap-center {
+  margin-bottom: 45px !important; /* Squeezes vertical padding space above the card ribbon tracking */
+}
+
+/* --- ADAPTIVE DISPATCH OVERRIDES --- */
+@media (max-width: 1100px) {
+  .payment-flow-grid {
+    margin: 0;
+  } /* Releases center alignment bounds to allow edge sliding on smaller monitors */
+}
+
+@media (max-width: 768px) {
+  .payment-engine-container {
+    padding: 100px 0 100px 0;
+  }
+
+  /* 
+     THE FINANCIAL SLIDER VIEWPORT SHIELD
+     Expanded vertical padding track room lets the soft radial touch glow 
+     fade out completely non-detectably into the dark canvas background.
+  */
+  .payment-pods-shield {
+    padding: 10px 5% 55px 5% !important;
+  }
+
+  .payment-luxury-pod {
+    width: 285px;
+    padding: 35px 24px;
+  }
+
+  /* --- SURGICAL RESISTANCE: ELIMINATES INVESTMENT CARD SHARP GLOW OUTLINE ON TOUCH --- */
+  .payment-pods-shield .investment-luxury-card:active,
+  .payment-pods-shield .investment-luxury-card:focus,
+  .payment-pods-shield .premium-gateway-pod:active,
+  .payment-pods-shield .premium-gateway-pod:focus {
+    /* 
+       THE OPACITY ZERO NULLIFICATION SHIELD:
+       Forces any parent container block elements leaking underneath to be totally 
+       transparent and clear of shadows on touch. Wipes out the 90-degree ghost artifact completely.
+    */
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    outline-color: transparent !important;
+    -webkit-appearance: none !important;
+  }
+
+  /* Focuses the luxury diffused aura strictly onto the inner card panel shape */
+  .payment-pods-shield .investment-luxury-card:active .payment-card-inner,
+  .payment-pods-shield .investment-luxury-card:focus .payment-card-inner,
+  .payment-pods-shield .premium-gateway-pod:active .payment-card-inner,
+  .payment-pods-shield .premium-gateway-pod:focus .payment-card-inner {
+    /* Hard-locks background color to deep slate on mobile finger presses */
+    background-color: #0b131e !important;
+
+    /* Subtle executive compression response click feedback feeling */
+    transform: scale(0.98) !important;
+
+    /* Modifies pre-existing framework boundary color line instead of adding double lines */
+    border-color: var(--color-gold) !important;
+    outline: none !important;
+
+    /* 
+       THE SOFT FLOATING RADIAL GLOW FILTER:
+       Increased blur radius to 50px and dropped density down to 3% opacity.
+       This makes the aura spread out broadly and fade to zero completely seamlessly.
+    */
+    box-shadow: 0 15px 50px rgba(200, 161, 74, 0.03) !important;
+  }
+} /* Final absolute closing bracket seals the entire mobile responsive media block safely */
+
+/* =========================================================================
+   SURGICAL STYLE EXTENSION: FINAL CONVERSION™ CLOSURE MODULE INTERFACE
+   ========================================================================= */
+
+.final-conversion-container {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  clear: both;
+}
+
+/* Local Landscape Photo Shield & Slow Auto-Zooming Mechanics */
+.final-conversion-backdrop-shield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.final-zoom-media-node {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.1;
+  filter: grayscale(100%) contrast(115%);
+  animation: finalLuxuryZoom 25s ease infinite alternate;
+  will-change: transform;
+}
+
+.final-heavy-dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-black) 0%,
+    rgba(5, 5, 5, 0.7) 20%,
+    rgba(2, 22, 47, 0.4) 50%,
+    rgba(5, 5, 5, 0.7) 80%,
+    var(--color-black) 100%
+  );
+}
+
+/* Center-Balanced Content Core Envelope */
+.final-conversion-central-matrix {
+  position: relative;
+  z-index: 5;
+  width: 92% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+.final-content-shield-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 100px 0;
+}
+
+/* Mini Brand Label Typography */
+.final-prestige-label {
+  font-size: 0.8rem;
+  color: rgba(245, 245, 245, 0.4);
+  letter-spacing: 4px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  display: block;
+}
+
+/* Decision Master Headline Typography */
+.final-binary-headline {
+  font-size: calc(1.3rem + 1.5vw);
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: var(--color-white);
+  line-height: 1.25;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+/* Strategic Pillars Text Layout Row */
+.final-pillars-narrative {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 65px;
+}
+
+.final-pillars-narrative span {
+  font-size: calc(0.85rem + 0.1vw);
+  color: rgba(245, 245, 245, 0.55);
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.pillar-divider {
+  color: var(--color-gold) !important;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* Action Trigger Layout Container Matrix */
+.final-action-trigger-matrix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Primary Access Gold Border Button Element */
+.btn-final-access-gold {
+  position: relative;
+  width: 250px;
+  height: 54px;
+  background: transparent;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.btn-final-access-gold::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 40%,
+    rgba(200, 161, 74, 0.1) 60%,
+    var(--color-gold) 100%
+  );
+  animation: finalGoldRotation 7s infinite linear;
+  z-index: 1;
+}
+
+.btn-access-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+  z-index: 2;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-final-access-gold:hover .btn-access-inner {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  box-shadow: 0 0 30px rgba(200, 161, 74, 0.2);
+}
+
+/* Cinematic Slow Zoom Keyframe Mapping */
+@media (prefers-reduced-motion: no-preference) {
+  .final-zoom-media-node {
+    animation: finalLuxuryZoom 25s ease infinite alternate;
+  }
+}
+
+@keyframes finalLuxuryZoom {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.08) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes finalGoldRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- ADAPTIVE DISPATCH CODES MULTI VIEWPORTS --- */
+@media (max-width: 768px) {
+  .final-conversion-container {
+    min-height: 80vh;
+    padding: 60px 0;
+  }
+  .final-content-shield-box {
+    padding: 40px 0;
+  }
+  .final-binary-headline {
+    font-size: 1.65rem;
+    letter-spacing: 4px;
+  }
+  .final-pillars-narrative {
+    gap: 10px;
+    margin-bottom: 45px;
+  }
+  .final-pillars-narrative span {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .btn-final-access-gold {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+/* =========================================================================
+   YASEEN VANTAGE™ | ELITE DUAL-LAYER CAROUSEL INTERFACE LAYOUT ENGINE
+   MANUAL CONTROLLER TRACKBAR COMPONENT STYLING REGIME
+   ========================================================================= */
+
+.manual-slider-track-wrapper {
+  width: 90%;
+  max-width: 500px;
+  margin: 35px auto 45px auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* The structural path rail */
+.manual-slider-rail {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 161, 74, 0.12);
+  padding: 4px;
+  border-radius: 1px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+/* Master Custom Input Range Trackbar Architecture */
+.manual-slider-thumb-bar {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  outline: none;
+  margin: 0;
+  cursor: grab;
+}
+
+.manual-slider-thumb-bar:active {
+  cursor: grabbing;
+}
+
+/* Premium Gold Slider Thumb - Webkit Engine Browsers */
+.manual-slider-thumb-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px; /* Long executive slider thumb handle pattern */
+  height: 6px;
+  background: #c5a059; /* Core Yaseen Gold Color Code Variable */
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.manual-slider-thumb-bar::-webkit-slider-thumb:hover {
+  background: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Premium Gold Slider Thumb - Mozilla Firefox Engine Browsers */
+.manual-slider-thumb-bar::-moz-range-thumb {
+  width: 80px;
+  height: 6px;
+  background: #c5a059;
+  border: none;
+  border-radius: 1px;
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+  transition:
+    background-color 0.2s,
+    box-shadow 0.2s;
+  cursor: grab;
+}
+
+.manual-slider-thumb-bar::-moz-range-thumb:hover {
+  background: #ffffff;
+}
+
+/* Minimalist Instruction Tagline Typography */
+.manual-slider-instruction-tag {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+/* =========================================================================
+   YASEEN VANTAGE™ | DUAL-LAYER CAROUSEL INTERFACE INTERCEPT
+   REFINED RESPONSIVE VISIBILITY OVERRIDE
+   ========================================================================= */
+
+/* 
+   THE MOBILE SHROUD COVENANT:
+   Hides the manual slider bar, track rail, and instruction tagline text rows 
+   completely from smartphone viewports (screens under 768px wide).
+*/
+@media (max-width: 768px) {
+  .manual-slider-track-wrapper {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* 
+   THE DESKTOP EMBODIMENT MODEL:
+   Keeps the luxury gold bar active strictly for widescreen desktop preview monitors 
+   so mouse users can slide the track freely without snappy pullback bugs.
+*/
+@media (min-width: 769px) {
+  .manual-slider-track-wrapper {
+    display: block !important;
+  }
+}
+
+/* =========================================================================
+   🔒 ADD TO THE ABSOLUTE BOTTOM OF css/style.css
+   MASTER VIEWPORT RESPONSIVE VISIBILITY WALL — ENGINE v2.8
+   STOPS ELEMENT LEAKAGES, REPEATED INPUTS, AND TITLE AXIS DRIFT ON MOBILE
+   ========================================================================= */
+
+/* --- 1. DESKTOP VIEWPORT TIERS: ENFORCE STRUCTURE MARGINS --- */
+@media (min-width: 769px) {
+  /* Hard-locks condensed mobile fields from rendering or leaking into desktop streams */
+  #individual-upgrade-condensation-grid,
+  .mobile-only-intake-row,
+  #mobileSystemSelectorNode {
+    display: none !important;
+  }
+}
+
+/* --- 2. MOBILE VIEWPORT TIERS: FORCE BLOCK ISOLATION & AXIS LOCKS --- */
+@media (max-width: 768px) {
+  /* 
+     CRITICAL RECTIFICATION SHIELD: 
+     Completely drops your desktop form grids from the mobile rendering tree.
+     This kills the double-input bug and stops unwanted sections from appearing.
+  */
+  #full-system-intake-grid {
+    display: none !important;
+  }
+
+  /* Forces your clean mobile form container block to stack natively at full width */
+  #individual-upgrade-condensation-grid {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+  }
+
+  /* 
+     RE-CENTER SHIELD: Hardlocks your asset selection title to sit cleanly 
+     centered on smartphone screens without drifting off its layout axis
+  */
+  #dynamicActiveServiceTitleDisplay {
+    font-size: 14px !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 15px auto !important;
+    color: #c5a059 !important;
+  }
+
+  /* 
+     ANTI-REVEAL COMPRESSION SHIELD:
+     Completely blocks hidden custom scope description typing sections from 
+     randomly popping up when a flagship system package (Emir/Dynasty) is active 
+  */
+  #manual-specifications-scope-block,
+  #custom-enhancements-checklist-wrapper {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Aligns input option checkbox list rows natively down a straight vertical line */
+  .enhancement-checkbox-row-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 12px 0 !important;
+  }
+}
+
+/* =========================================================================
+   🔒 YASEEN VANTAGE™ | MASTER UNIFIED PORTRAIT TABLET SHIELD v2.0
+   PRODUCTION TARGET: 11-Inch Premium Tablet Portrait Viewports (769px - 1024px)
+   🔒 MOBILE SAFEGUARD LAYER: Stripped destructive !important anchors from general layout 
+   classes to completely guarantee 0% distortion or formatting leakage onto your working phone view!
+   ========================================================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* 🔒 SAFE INTUATIVE UN-SHROUD: Promotes content visibility on portrait tablets 
+     WITHOUT overriding or crashing your custom phone scrolling animation timers */
+  .recursive-reveal,
+  .continuous-scroll-reveal-node,
+  .drawer-reveal-node {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  /* 🔒 VERTICAL BLOCK Realignment FOR PORTRAIT TABLETS
+     Collapses broad horizontal lanes to stop element clipping on 11-inch screens */
+  .luxury-widescreen-split-layout-grid,
+  .system-structural-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 45px !important;
+    width: 100% !important;
+  }
+
+  /* Expand structural lanes to stretch naturally down the column axis */
+  .luxury-widescreen-left-block-lane,
+  .luxury-widescreen-right-block-lane,
+  .system-column-left,
+  .system-column-right,
+  .asset-card-link {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    flex: none !important;
+  }
+
+  /* Squeezes desktop tracking buffers back inside 11-inch portrait glass boundaries */
+  .primary-headline {
+    font-size: clamp(24px, 5vw, 36px) !important;
+    letter-spacing: 0.25em !important;
+    text-indent: 0.25em !important;
+    white-space: normal !important; /* Allows long word strings to wrap safely on mid-size frames */
+    display: block !important;
+    text-align: center !important;
+    margin-bottom: 50px !important;
+  }
+
+  .supporting-perception-label-deck {
+    font-size: 14px !important;
+    margin-bottom: 75px !important;
+    max-width: 480px !important;
+  }
+
+  /* Compresses section height margins to keep content tightly aligned */
+  .systems-engine-container,
+  .enhancements-engine-container {
+    padding: 120px 0 90px 0 !important;
+  }
+
+  .systems-central-matrix,
+  .enhancements-title-wrap-center {
+    width: 90% !important;
+    margin: 0 auto !important;
+    gap: 60px !important;
+  }
+
+  /* Constrains profile portraits so they center elegantly on tablet frames */
+  .system-local-card-png-asset-fluid {
+    max-width: 320px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Modular footer rows transition cleanly to vertical rows on portrait tablets */
+  .footer-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+    text-align: center !important;
+  }
+
+  .asset-categorization-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .category-block {
+    justify-content: center !important;
+  }
+}
