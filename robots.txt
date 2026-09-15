@@ -1,1 +1,3 @@
-
+User-agent: *
+Allow: /
+Sitemap: https://yaseenvantage.com/sitemap.xml
